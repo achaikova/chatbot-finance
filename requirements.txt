@@ -1,0 +1,9 @@
+pypdf
+# onnxruntime
+# rapidocr-onnxruntime
+langchain==0.1.0
+faiss-cpu
+sentence-transformers
+chainlit
+llama_index
+llama-cpp-python
