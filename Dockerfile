@@ -5,15 +5,25 @@ WORKDIR /app
 
 # Install Python dependencies
 ADD ./requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install -r requirements.txt
-
-RUN CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.2.27
+RUN pip install llama-cpp-python
 
 # Copy the whole directory to the working directory
-COPY . .
+COPY data/ ./data/
+COPY model/ ./model/
+COPY index/ ./index/
+COPY script/ ./script/
+COPY init_model.sh .
+# Check the model
+RUN ./init_model.sh
 
 # Ingest the data
-RUN python3 ingest_data.py
+# RUN python3 ingest_data.py
+WORKDIR script/
 
+ENV HOST=0.0.0.0
+ENV LISTEN_PORT 8000
+EXPOSE 8000
 # Start the server
-CMD ["python3", "retrieval_chatbot.py"]
+CMD ["chainlit", "run", "retrieval_chatbot.py"]

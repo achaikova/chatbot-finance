@@ -32,3 +32,9 @@ Before running the chatbot, specify the necessary paths for model data, financia
 - `MODEL_PATH`: path where the llama model is stored.
 - `DATA_PATH`: path to financial data (articles, slides, etc.).
 - `DB_FAISS_PATH`: path to store the Faiss database.
+
+Export environment variables:
+```angular2html
+export MODEL_PATH=$(python -c "from configuration import MODEL_PATH; print(MODEL_PATH)")
+export MODEL_DOWNLOAD_URL=$(python -c "from configuration import MODEL_DOWNLOAD_URL; print(MODEL_DOWNLOAD_URL)")
+```

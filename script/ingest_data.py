@@ -2,7 +2,6 @@ from langchain.document_loaders import PyPDFDirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores.faiss import FAISS
-import os.path
 from llama_index import (
     VectorStoreIndex,
     SimpleDirectoryReader,
@@ -11,7 +10,7 @@ from llama_index import (
 from llama_index.embeddings import HuggingFaceEmbedding
 from llama_index.node_parser import HierarchicalNodeParser, get_leaf_nodes
 
-from configuration import DB_FAISS_PATH, DATA_PATH
+from script.configuration import DB_FAISS_PATH, DATA_PATH
 
 
 

@@ -3,15 +3,15 @@
  # Check if the MODEL environment variable is set
  if [ -z "$MODEL_PATH" ]
  then
-     echo "Please set the MODEL_FILE environment variable"
-     exit 1
+     echo "Exporting MODEL_PATH variable"
+     MODEL_PATH=$(python -c 'from configuration import MODEL_PATH; print(MODEL_PATH)')
  fi
 
  # Check if the MODEL_DOWNLOAD_URL environment variable is set
  if [ -z "$MODEL_DOWNLOAD_URL" ]
  then
-     echo "Please set the MODEL_DOWNLOAD_URL environment variable"
-     exit 1
+     echo "Exporting MODEL_DOWNLOAD_URL variable"
+     MODEL_DOWNLOAD_URL=$(python -c 'from configuration import MODEL_DOWNLOAD_URL; print(MODEL_DOWNLOAD_URL)')
  fi
 
  # Check if the model file exists
