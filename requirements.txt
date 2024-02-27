@@ -1,9 +1,12 @@
 pypdf
-# onnxruntime
-# rapidocr-onnxruntime
-langchain==0.1.0
-faiss-cpu
+langchain
 sentence-transformers
 chainlit
-llama_index
+llama_index==0.10.11
 llama-cpp-python
+chromadb
+llama-index-llms-langchain
+llama-index-embeddings-huggingface
+llama-index-vector-stores-chroma
+fschat[model_worker,webui]
+transformers==4.37.2
