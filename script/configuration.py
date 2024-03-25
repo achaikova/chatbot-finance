@@ -1,6 +1,6 @@
 MODEL_PATH = "../model/llama-2-7b-chat.Q5_K_S.gguf"
+MODEL_DIR_PATH = "../model/"
 DATA_PATH = "../data_mmd/"
-DB_FAISS_PATH = "../index/"
 CHROMA_PATH = "../chroma_db/"
 CHROMA_COLLECTION = "financial_chatbot"
 MODEL_DOWNLOAD_URL = "https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q5_K_S.gguf?download=true"

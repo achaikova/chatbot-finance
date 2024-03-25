@@ -1,8 +1,7 @@
-pypdf
 langchain
 sentence-transformers
 chainlit
-llama_index==0.10.11
+llama-index
 llama-cpp-python
 chromadb
 llama-index-llms-langchain
